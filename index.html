@@ -4,6 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <style>
+      body {
+        background-color: rgb(10, 10, 10);
+      }
+      * {
+        color: rgb(243, 243, 243);
+        transition: 0.2s;
+        font-family: sans-serif;
+      }
+      input,
+      button,
+      select {
+        background-color: gray;
+      }
+
+      input {
+        font-weight: bold;
+      }
+
+      .darken-anim {
+        transition: 0s;
+        color: rgb(139, 139, 139) !important;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <label
+      >Min Number
+      <input class="min-num" type="text" value="1" />
+    </label>
+    <label
+      >Max Number
+      <input class="max-num" type="text" value="100" />
+    </label>
+    <label
+      >Amount Of Numbers
+      <input class="amt-num" type="text" value="5" />
+    </label>
+    <label
+      >Betwen Number Delay (seconds)
+      <input class="num-delay" type="number" step="0.01" value="1" />
+    </label>
+    <button class="start-btn">start</button>
+    <h1 style="font-size: 5rem; text-align: center" class="number-pop">0</h1>
+    <button style="position: absolute; left: 50%; transform: translateX(-50%)" class="show-answer">
+      show Answer
+    </button>
+    <script src="javascript.js"></script>
+  </body>
 </html>
