@@ -93,5 +93,10 @@ function showAnswer() {
     numberPop.innerHTML = answer;
     numberPop.style.color = "green";
     gameStarted = false;
+
+    var speech = new SpeechSynthesisUtterance(answer.toString());
+    speech.rate = 2;
+    speech.lang = "en-US";
+    window.speechSynthesis.speak(speech);
   }
 }
